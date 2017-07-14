@@ -1,0 +1,1269 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    font-family: Share;
+}
+
+section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, sfection.has-light-background h5, section.has-light-background h6 {
+    color: #222;
+}
+
+.reveal .smaller-text {
+    font-size: 80%;
+}
+
+.reveal .small-text {
+    font-size: 60%;
+}
+
+.reveal .controls .navigate-left {
+    left: 0;
+}
+
+.reveal span.url {
+    font-family: "Share Mono", "Courier New", monospace;
+    color: #fff;
+    font-size: 80%;
+}
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+    background: #222;
+    background-color: #222;
+}
+
+.reveal {
+    font-family: "Share", Helvetica, sans-serif;
+    font-size: 42px;
+    font-weight: normal;
+    color: #fff;
+}
+
+::selection {
+    color: #fff;
+    background: #bee4fd;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    color: #fff;
+    background: #bee4fd;
+    text-shadow: none;
+}
+
+.reveal .slides > section,
+.reveal .slides > section > section {
+    line-height: 1.3;
+    font-weight: inherit;
+}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    margin: 0 0 20px 0;
+    color: #fff;
+    font-family: "Share", Helvetica, sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-transform: none;
+    text-shadow: none;
+    word-wrap: break-word;
+}
+
+.reveal h1 {
+    font-size: 2em;
+}
+
+.reveal h2 {
+    font-size: 1.4em;
+}
+
+.reveal h3 {
+    font-size: 1.1em;
+}
+
+.reveal h4 {
+    font-size: 1em;
+}
+
+.reveal h1 {
+    text-shadow: none;
+}
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+    margin: 20px 0;
+    line-height: 1.3;
+}
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+    max-width: 95%;
+    max-height: 95%;
+}
+
+.reveal strong,
+.reveal b {
+    font-weight: bold;
+}
+
+.reveal em {
+    font-style: italic;
+}
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+    display: inline-block;
+    text-align: left;
+    margin: 0 0 0 1em;
+}
+
+.reveal ol {
+    list-style-type: decimal;
+}
+
+.reveal ul {
+    list-style-type: disc;
+}
+
+.reveal ul ul {
+    list-style-type: square;
+}
+
+.reveal ul ul ul {
+    list-style-type: circle;
+}
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+    display: block;
+    margin-left: 40px;
+}
+
+.reveal dt {
+    font-weight: bold;
+}
+
+.reveal dd {
+    margin-left: 40px;
+}
+
+.reveal q,
+.reveal blockquote {
+    quotes: none;
+}
+
+.reveal blockquote {
+    display: block;
+    position: relative;
+    width: 70%;
+    margin: 20px auto;
+    padding: 5px;
+    font-style: italic;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+    display: inline-block;
+}
+
+.reveal q {
+    font-style: italic;
+}
+
+.reveal pre {
+    display: block;
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    text-align: left;
+    font-size: 0.55em;
+    font-family: monospace;
+    line-height: 1.2em;
+    word-wrap: break-word;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+}
+
+.reveal code {
+    font-family: monospace;
+}
+
+.reveal pre code {
+    display: block;
+    padding: 5px;
+    overflow: auto;
+    max-height: 400px;
+    word-wrap: normal;
+}
+
+.reveal table {
+    margin: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.reveal table th {
+    font-weight: bold;
+}
+
+.reveal table th,
+.reveal table td {
+    text-align: left;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    border-bottom: 1px solid;
+}
+
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
+    text-align: center;
+}
+
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
+    text-align: right;
+}
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.reveal sup {
+    vertical-align: super;
+}
+
+.reveal sub {
+    vertical-align: sub;
+}
+
+.reveal small {
+    display: inline-block;
+    font-size: 0.6em;
+    line-height: 1.2em;
+    vertical-align: top;
+}
+
+.reveal small * {
+    vertical-align: top;
+}
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+    color: #42affa;
+    text-decoration: none;
+    -webkit-transition: color .15s ease;
+    -moz-transition: color .15s ease;
+    transition: color .15s ease;
+}
+
+.reveal a:hover {
+    color: #8dcffc;
+    text-shadow: none;
+    border: none;
+}
+
+.reveal .roll span:after {
+    color: #fff;
+    background: #068de9;
+}
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+    margin: 15px 0px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 4px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.reveal section img.plain {
+    border: 0;
+    box-shadow: none;
+}
+
+.reveal a img {
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    transition: all .15s linear;
+}
+
+.reveal a:hover img {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #42affa;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+    border-right-color: #42affa;
+}
+
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+    border-left-color: #42affa;
+}
+
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+    border-bottom-color: #42affa;
+}
+
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+    border-top-color: #42affa;
+}
+
+.reveal .controls .navigate-left.enabled:hover {
+    border-right-color: #8dcffc;
+}
+
+.reveal .controls .navigate-right.enabled:hover {
+    border-left-color: #8dcffc;
+}
+
+.reveal .controls .navigate-up.enabled:hover {
+    border-bottom-color: #8dcffc;
+}
+
+.reveal .controls .navigate-down.enabled:hover {
+    border-top-color: #8dcffc;
+}
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.reveal .progress span {
+    background: #42affa;
+    -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}
+
+@font-face {
+    font-family: "Share Mono";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Share TechMono"), local("Share-TechMono"), url(../../fonts/Share-TechMono.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Share";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Share Regular"), local("Share-Regular"), url(../../fonts/Share-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Share";
+    font-style: italic;
+    font-weight: 400;
+    src: local("Share Italic"), local("Share-Italic"), url(../../fonts/Share-Italic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Share";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Share Bold"), local("Share-Bold"), url(../../fonts/Share-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Share";
+    font-style: italic;
+    font-weight: 700;
+    src: local("Share Bold Italic"), local("Share-BoldItalic"), url(../../fonts/Share-BoldItalic.ttf) format("truetype");
+}
+
+/* Grid HTML Classes */
+.row {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 62.5em;
+    *zoom: 1;
+}
+
+.row:before, .row:after {
+    content: " ";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+.row.collapse .column,
+.row.collapse .columns {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    float: left;
+}
+
+.row .row {
+    width: auto;
+    margin-left: -0.9375em;
+    margin-right: -0.9375em;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: none;
+    *zoom: 1;
+}
+
+.row .row:before, .row .row:after {
+    content: " ";
+    display: table;
+}
+
+.row .row:after {
+    clear: both;
+}
+
+.row .row.collapse {
+    width: auto;
+    margin: 0;
+    max-width: none;
+    *zoom: 1;
+}
+
+.row .row.collapse:before, .row .row.collapse:after {
+    content: " ";
+    display: table;
+}
+
+.row .row.collapse:after {
+    clear: both;
+}
+
+.column,
+.columns {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 100%;
+    float: left;
+}
+
+@media only screen {
+    .column,
+    .columns {
+        position: relative;
+        padding-left: 0.9375em;
+        padding-right: 0.9375em;
+        float: left;
+    }
+
+    .small-1 {
+        position: relative;
+        width: 8.3333333333%;
+    }
+
+    .small-2 {
+        position: relative;
+        width: 16.6666666667%;
+    }
+
+    .small-3 {
+        position: relative;
+        width: 25%;
+    }
+
+    .small-4 {
+        position: relative;
+        width: 33.3333333333%;
+    }
+
+    .small-5 {
+        position: relative;
+        width: 41.6666666667%;
+    }
+
+    .small-6 {
+        position: relative;
+        width: 50%;
+    }
+
+    .small-7 {
+        position: relative;
+        width: 58.3333333333%;
+    }
+
+    .small-8 {
+        position: relative;
+        width: 66.6666666667%;
+    }
+
+    .small-9 {
+        position: relative;
+        width: 75%;
+    }
+
+    .small-10 {
+        position: relative;
+        width: 83.3333333333%;
+    }
+
+    .small-11 {
+        position: relative;
+        width: 91.6666666667%;
+    }
+
+    .small-12 {
+        position: relative;
+        width: 100%;
+    }
+
+    .small-offset-0 {
+        position: relative;
+        margin-left: 0%;
+    }
+
+    .small-offset-1 {
+        position: relative;
+        margin-left: 8.3333333333%;
+    }
+
+    .small-offset-2 {
+        position: relative;
+        margin-left: 16.6666666667%;
+    }
+
+    .small-offset-3 {
+        position: relative;
+        margin-left: 25%;
+    }
+
+    .small-offset-4 {
+        position: relative;
+        margin-left: 33.3333333333%;
+    }
+
+    .small-offset-5 {
+        position: relative;
+        margin-left: 41.6666666667%;
+    }
+
+    .small-offset-6 {
+        position: relative;
+        margin-left: 50%;
+    }
+
+    .small-offset-7 {
+        position: relative;
+        margin-left: 58.3333333333%;
+    }
+
+    .small-offset-8 {
+        position: relative;
+        margin-left: 66.6666666667%;
+    }
+
+    .small-offset-9 {
+        position: relative;
+        margin-left: 75%;
+    }
+
+    .small-offset-10 {
+        position: relative;
+        margin-left: 83.3333333333%;
+    }
+
+    [class*="column"] + [class*="column"]:last-child {
+        float: right;
+    }
+
+    [class*="column"] + [class*="column"].end {
+        float: left;
+    }
+
+    .column.small-centered,
+    .columns.small-centered {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        float: none !important;
+    }
+}
+
+/* Styles for screens that are atleast 768px; */
+@media only screen and (min-width: 768px) {
+    .large-1 {
+        position: relative;
+        width: 8.3333333333%;
+    }
+
+    .large-2 {
+        position: relative;
+        width: 16.6666666667%;
+    }
+
+    .large-3 {
+        position: relative;
+        width: 25%;
+    }
+
+    .large-4 {
+        position: relative;
+        width: 33.3333333333%;
+    }
+
+    .large-5 {
+        position: relative;
+        width: 41.6666666667%;
+    }
+
+    .large-6 {
+        position: relative;
+        width: 50%;
+    }
+
+    .large-7 {
+        position: relative;
+        width: 58.3333333333%;
+    }
+
+    .large-8 {
+        position: relative;
+        width: 66.6666666667%;
+    }
+
+    .large-9 {
+        position: relative;
+        width: 75%;
+    }
+
+    .large-10 {
+        position: relative;
+        width: 83.3333333333%;
+    }
+
+    .large-11 {
+        position: relative;
+        width: 91.6666666667%;
+    }
+
+    .large-12 {
+        position: relative;
+        width: 100%;
+    }
+
+    .row .large-offset-0 {
+        position: relative;
+        margin-left: 0%;
+    }
+
+    .row .large-offset-1 {
+        position: relative;
+        margin-left: 8.3333333333%;
+    }
+
+    .row .large-offset-2 {
+        position: relative;
+        margin-left: 16.6666666667%;
+    }
+
+    .row .large-offset-3 {
+        position: relative;
+        margin-left: 25%;
+    }
+
+    .row .large-offset-4 {
+        position: relative;
+        margin-left: 33.3333333333%;
+    }
+
+    .row .large-offset-5 {
+        position: relative;
+        margin-left: 41.6666666667%;
+    }
+
+    .row .large-offset-6 {
+        position: relative;
+        margin-left: 50%;
+    }
+
+    .row .large-offset-7 {
+        position: relative;
+        margin-left: 58.3333333333%;
+    }
+
+    .row .large-offset-8 {
+        position: relative;
+        margin-left: 66.6666666667%;
+    }
+
+    .row .large-offset-9 {
+        position: relative;
+        margin-left: 75%;
+    }
+
+    .row .large-offset-10 {
+        position: relative;
+        margin-left: 83.3333333333%;
+    }
+
+    .row .large-offset-11 {
+        position: relative;
+        margin-left: 91.6666666667%;
+    }
+
+    .push-1 {
+        position: relative;
+        left: 8.3333333333%;
+        right: auto;
+    }
+
+    .pull-1 {
+        position: relative;
+        right: 8.3333333333%;
+        left: auto;
+    }
+
+    .push-2 {
+        position: relative;
+        left: 16.6666666667%;
+        right: auto;
+    }
+
+    .pull-2 {
+        position: relative;
+        right: 16.6666666667%;
+        left: auto;
+    }
+
+    .push-3 {
+        position: relative;
+        left: 25%;
+        right: auto;
+    }
+
+    .pull-3 {
+        position: relative;
+        right: 25%;
+        left: auto;
+    }
+
+    .push-4 {
+        position: relative;
+        left: 33.3333333333%;
+        right: auto;
+    }
+
+    .pull-4 {
+        position: relative;
+        right: 33.3333333333%;
+        left: auto;
+    }
+
+    .push-5 {
+        position: relative;
+        left: 41.6666666667%;
+        right: auto;
+    }
+
+    .pull-5 {
+        position: relative;
+        right: 41.6666666667%;
+        left: auto;
+    }
+
+    .push-6 {
+        position: relative;
+        left: 50%;
+        right: auto;
+    }
+
+    .pull-6 {
+        position: relative;
+        right: 50%;
+        left: auto;
+    }
+
+    .push-7 {
+        position: relative;
+        left: 58.3333333333%;
+        right: auto;
+    }
+
+    .pull-7 {
+        position: relative;
+        right: 58.3333333333%;
+        left: auto;
+    }
+
+    .push-8 {
+        position: relative;
+        left: 66.6666666667%;
+        right: auto;
+    }
+
+    .pull-8 {
+        position: relative;
+        right: 66.6666666667%;
+        left: auto;
+    }
+
+    .push-9 {
+        position: relative;
+        left: 75%;
+        right: auto;
+    }
+
+    .pull-9 {
+        position: relative;
+        right: 75%;
+        left: auto;
+    }
+
+    .push-10 {
+        position: relative;
+        left: 83.3333333333%;
+        right: auto;
+    }
+
+    .pull-10 {
+        position: relative;
+        right: 83.3333333333%;
+        left: auto;
+    }
+
+    .push-11 {
+        position: relative;
+        left: 91.6666666667%;
+        right: auto;
+    }
+
+    .pull-11 {
+        position: relative;
+        right: 91.6666666667%;
+        left: auto;
+    }
+
+    .column.large-centered,
+    .columns.large-centered {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        float: none !important;
+    }
+
+    .column.large-uncentered,
+    .columns.large-uncentered {
+        margin-left: 0;
+        margin-right: 0;
+        float: left !important;
+    }
+
+    .column.large-uncentered.opposite,
+    .columns.large-uncentered.opposite {
+        float: right !important;
+    }
+}
+
+.reveal .section {
+    border: 1px solid #000;
+}
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+    display: block;
+}
+
+.reveal .slides > section, .reveal .slides > section > section {
+    text-align: left;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    box-sizing: border-box;
+}
+
+.reveal .slides > section > section {
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+}
+
+.reveal .slides {
+    background: #222;
+}
+
+.reveal .slides h1, .reveal .slides h2 {
+    text-align: center;
+}
+
+.reveal.has-light-background .slides {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.reveal p, .reveal ul, .reveal ol {
+    text-align: left;
+}
+
+.reveal .footer {
+    font-size: 50%;
+    position: fixed;
+    bottom: 0.5em;
+    width: 100%;
+    text-align: center;
+    color: #aaa;
+}
+
+.reveal.has-light-background .footer {
+    color: #222;
+}
+
+.reveal.has-light-background h1, .reveal.has-light-background h2, .reveal.has-light-background h3, .reveal.has-light-background h4, .reveal.has-light-background h5, .reveal.has-light-background h6 {
+    color: #222;
+}
+
+.reveal img.illustration {
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    box-shadow: none;
+    background: none;
+}
+
+.reveal pre, .reveal span.command, .reveal .path {
+    font-family: "Share Mono", "Courier New", monospace;
+    background: #222;
+    color: #fff;
+    -webkit-text-size-adjust: none;
+}
+
+.reveal pre {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    font-size: 65%;
+}
+
+.reveal pre.large {
+    line-height: 1.3;
+    font-size: 75%;
+}
+
+.reveal .path {
+    font-size: 75%;
+    padding: 0.2em 0.4em;
+}
+
+.reveal span.command {
+    font-size: 75%;
+    padding: 0.2em 0.4em;
+}
+
+.reveal ul.exercises li {
+    margin-bottom: 0.4em;
+}
+
+.reveal ul > li {
+    list-style: none;
+}
+
+.reveal ul > li:before {
+    background: url(../../img/dot.png) no-repeat;
+    display: inline-block;
+    content: "";
+    width: 0.5em;
+    height: 0.5em;
+    background-size: contain;
+    margin-left: -0.75em;
+    margin-right: 0.25em;
+}
+
+.reveal li > ul, .reveal li > ol {
+    font-size: 85%;
+}
+
+.reveal li {
+    margin-bottom: 0.25em;
+}
+
+.reveal h2:first-child {
+    background-size: contain;
+    background: url(../../img/headline-bg-700.png) no-repeat center bottom;
+    padding: 0 0 20px 0;
+    margin: 0 0 30px 0;
+}
+
+.reveal h3.command, .reveal h4.command {
+    text-transform: none;
+    font-weight: bold;
+}
+
+.reveal section.title h2.subtitle {
+    position: absolute;
+    left: 5%;
+    top: 100%;
+    text-transform: none;
+    font-size: 120%;
+}
+
+.reveal p.conclusion:before {
+    background: url(../../img/arrow.png) no-repeat;
+    display: inline-block;
+    content: "";
+    width: 0.65em;
+    height: 0.5em;
+    background-size: contain;
+    margin-left: -0.75em;
+    margin-right: 0.1em;
+}
+
+.reveal p.todo {
+    text-align: left;
+    border: 2px solid #c00;
+    background: #fcc;
+    color: #222;
+    padding: 0.1em 0.2em;
+}
+
+.reveal p.todo:before {
+    content: 'TODO';
+    margin-right: 0.2em;
+    font-weight: bold;
+}
+
+.reveal .highlight-red {
+    color: #ff2c2d;
+}
+
+.reveal .highlight-green {
+    color: #17ff2e;
+}
+
+.reveal .highlight-blue {
+    color: #1b91ff;
+}
+
+.reveal p.copyright {
+    font-size: 50%;
+    margin-top: 5em;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.hidden-sm {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /*
+    @media only screen and (min-width: $breakpoint-small) {
+      width: 80%;
+    }
+
+    @media only screen and (min-width: $breakpoint-large) {
+      width: 75%;
+      max-width: 60rem;
+    }
+  */
+}
+
+.row {
+    position: relative;
+    width: 100%;
+}
+
+.row [class^="col"] {
+    float: left;
+    margin: 0.5rem 2%;
+    min-height: 0.125rem;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+    width: 96%;
+}
+
+.col-1-sm {
+    width: 4.3333333333%;
+}
+
+.col-2-sm {
+    width: 12.6666666667%;
+}
+
+.col-3-sm {
+    width: 21%;
+}
+
+.col-4-sm {
+    width: 29.3333333333%;
+}
+
+.col-5-sm {
+    width: 37.6666666667%;
+}
+
+.col-6-sm {
+    width: 46%;
+}
+
+.col-7-sm {
+    width: 54.3333333333%;
+}
+
+.col-8-sm {
+    width: 62.6666666667%;
+}
+
+.col-9-sm {
+    width: 71%;
+}
+
+.col-10-sm {
+    width: 79.3333333333%;
+}
+
+.col-11-sm {
+    width: 87.6666666667%;
+}
+
+.col-12-sm {
+    width: 96%;
+}
+
+@media only screen and (min-width: 45em) {
+    .col-1 {
+        width: 4.3333333333%;
+    }
+
+    .col-2 {
+        width: 12.6666666667%;
+    }
+
+    .col-3 {
+        width: 21%;
+    }
+
+    .col-4 {
+        width: 29.3333333333%;
+    }
+
+    .col-5 {
+        width: 37.6666666667%;
+    }
+
+    .col-6 {
+        width: 46%;
+    }
+
+    .col-7 {
+        width: 54.3333333333%;
+    }
+
+    .col-8 {
+        width: 62.6666666667%;
+    }
+
+    .col-9 {
+        width: 71%;
+    }
+
+    .col-10 {
+        width: 79.3333333333%;
+    }
+
+    .col-11 {
+        width: 87.6666666667%;
+    }
+
+    .col-12 {
+        width: 96%;
+    }
+
+    .hidden-sm {
+        display: block;
+    }
+}
+
+.reveal h2:first-child {
+    background: none;
+}
+
+.typo3-logo {
+    background: url("../../img/typo3-white.svg") no-repeat;
+    opacity: 0.15;
+    height: 150%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -40%;
+    background-size: cover;
+}
+
+.reveal .slides {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
